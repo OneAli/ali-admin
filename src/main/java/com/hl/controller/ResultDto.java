@@ -1,12 +1,16 @@
-package com.hl.dto;
+package com.hl.controller;
 
 /**
- * common response template
+ * 通用响应模板对象
  * @param <T>
  */
 public class ResultDto<T> {
     public static final int SUCCESS = 0;
-    public static final int FAIL = 1;
+    public static final int SERVICE_ERROR = 500;
+
+    public static final int API_KEY_ERROR = 400;
+    public static final int INVALID_LOGIN_TOKEN = 401;
+
 
     private int code;
     private String message;
